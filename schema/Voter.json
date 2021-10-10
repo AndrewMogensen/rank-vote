@@ -1,0 +1,10 @@
+{
+  "poll_id": "string",
+  "voter_id": "string",
+  "selections": [
+    {
+      "option_name": "string",
+      "rank": "integer"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "owner_id": "string",
+  "status": "enum",
+  "start_time": "datetime",
+  "end_time": "datetime",
+  "options": [
+    {
+      "name": "string",
+      "description": "string"
+    }
+  ]
+}

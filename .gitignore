@@ -23,3 +23,6 @@ gradle-app.setting
 # local configs
 application.yml
 *secret.sh
+
+# database
+/volumes/

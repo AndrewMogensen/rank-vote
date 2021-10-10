@@ -1,0 +1,16 @@
+{
+  "poll_id": "string",
+  "winner": "string",
+  "option_statistics": [
+    {
+      "option_name": "string",
+      "option_description": "string",
+      "final_rank": "integer",
+      "final_percentage": "int",
+      "initial_rank": "integer",
+      "initial_rank_percentages": [
+        "double"
+      ]
+    }
+  ]
+}
