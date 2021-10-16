@@ -181,7 +181,8 @@ internal class PollServiceTest {
 
         verify { pollRepo wasNot Called }
         assertEquals(HttpStatus.BAD_REQUEST, result.statusCode)
-        assertTrue(result.body.isNullOrEmpty()) // TODO: useful validation messages
+        assertTrue(result.body.isNullOrEmpty())
+        // TODO: useful validation messages
     }
 
     @Test

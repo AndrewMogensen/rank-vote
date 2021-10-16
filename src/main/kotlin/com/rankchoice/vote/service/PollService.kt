@@ -95,20 +95,22 @@ class PollService @Autowired constructor(
 
     private fun validatePoll(poll: Poll) {
         // TODO: use custom exception type
+        var error = ""
         if (poll.endTime <= poll.startTime) {
-            throw IllegalArgumentException("endTime must be after startTime")
+            error += "endTime must be after startTime. "
         }
         if (poll.name.isBlank()) {
-            throw IllegalArgumentException("name cannot be empty")
+            error += "name cannot be empty. "
         }
         if (poll.description.isBlank()) {
-            throw IllegalArgumentException("description cannot be empty")
+            error += "description cannot be empty. "
         }
         if (poll.ownerId.toString().isBlank()) {
-            throw IllegalArgumentException("owner cannot be empty")
+            error += "owner cannot be empty. "
         }
-        if (poll.ownerId.toString().isBlank()) {
-            throw IllegalArgumentException("owner cannot be empty")
+
+        if (error.isNotEmpty()) {
+            throw IllegalArgumentException(error)
         }
     }
 }
