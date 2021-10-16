@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import java.lang.IllegalArgumentException
 import java.time.Instant
-import java.util.*
+import java.util.UUID
 import mu.KotlinLogging
 
 @Service

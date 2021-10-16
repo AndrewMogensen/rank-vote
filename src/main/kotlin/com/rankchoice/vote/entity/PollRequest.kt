@@ -1,7 +1,7 @@
 package com.rankchoice.vote.entity
 
 import java.time.Instant
-import java.util.*
+import java.util.UUID
 
 data class PollRequest(
     val name: String,
