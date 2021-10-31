@@ -1,4 +1,4 @@
-package com.rankchoice.vote.service
+package com.rankchoice.vote
 
 import kotlin.test.assertEquals
 

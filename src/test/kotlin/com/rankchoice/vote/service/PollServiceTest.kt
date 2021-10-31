@@ -1,5 +1,6 @@
 package com.rankchoice.vote.service
 
+import com.rankchoice.vote.TestUtilities
 import com.rankchoice.vote.entity.Poll
 import com.rankchoice.vote.entity.PollOption
 import com.rankchoice.vote.entity.PollRequest
@@ -225,15 +226,9 @@ internal class PollServiceTest {
             options = request.options // options get updated
         )
         every { pollRepo.findByIdOrNull(id) } returns existingPoll
-        every { pollRepo.save<Poll>(any()) } returns expectedPoll
+        every { pollRepo.save(expectedPoll) } returns expectedPoll
 
         val result = pollService.updatePoll(request, id)
-
-        verify {
-            pollRepo.save<Poll>(withArg {
-                TestUtilities.validateIdReplaced(expectedPoll, it, "id")
-            })
-        }
         assertEquals(HttpStatus.OK, result.statusCode)
         assertEquals(id.toString(), result.body)
     }
